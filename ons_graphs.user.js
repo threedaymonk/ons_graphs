@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name           ONS Graphs
 // @namespace      http://rewiredstate.org/
+// @description    Generate graphs in the browser for timeline datasets on the Office for National Statistics website.
 // @include        http://www.statistics.gov.uk/*
 // ==/UserScript==
 
