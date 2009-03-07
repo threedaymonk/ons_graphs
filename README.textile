@@ -2,6 +2,8 @@ h1. ONS Graphs
 
 Generate graphs in the browser for "timeline datasets":http://www.statistics.gov.uk/statbase/tsdtimezone.asp on the UK "Office for National Statistics":http://www.statistics.gov.uk/ website.
 
+The Office for National Statistics has a wide range of data going back over many years, but it's a bit hard to access. The Navidata program for browsing the data sets is free but Windows-only, clumsy to use, and produces hard-to-read graphs. Since we can view tables of numerical data in the browser, we can also generate graphs. This makes the information easier to interpret, especially for Mac and Linux users.
+
 h2. Using it
 
 # Get "Firefox":http://getfirefox.com/
