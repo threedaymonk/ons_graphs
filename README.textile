@@ -4,9 +4,9 @@ Generate graphs in the browser for "timeline datasets":http://www.statistics.gov
 
 h2. Using it
 
-1. Get "Firefox":http://getfirefox.com/
-2. Install "GreaseMonkey":https://addons.mozilla.org/firefox/addon/748
-3. Install "ons_graphs.user.js":http://github.com/threedaymonk/ons_graphs/raw/ea7224e36f91c8b6dc6abaf0aa3198bf4d87051b/ons_graphs.user.js
+# Get "Firefox":http://getfirefox.com/
+# Install "GreaseMonkey":https://addons.mozilla.org/firefox/addon/748
+# Install "ons_graphs.user.js":http://github.com/threedaymonk/ons_graphs/raw/ea7224e36f91c8b6dc6abaf0aa3198bf4d87051b/ons_graphs.user.js
 
 Browse to a "timeline dataset":http://www.statistics.gov.uk/statbase/tsdtimezone.asp, *View Table*, *View Series*, *Add to Selection*, *Download* then *View On-Screen*. (Sorry, but we couldn't improve _that_ awful navigation experience so easily!) You should see a graph of the data at the top, like this:
 
