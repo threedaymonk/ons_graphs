@@ -26,14 +26,26 @@ ONSGraphs = {
   },
 
   drawGraph: function(){
-    ONSGraphs.dataTableElement().graphTable({series: 'columns', position: 'before', height: '400'});
+    ONSGraphs.dataTableElement().graphTable({series: 'columns', position: 'before', height: '400', labelTransform: ONSGraphs.mapSeriesLabel()});
   },
 
   dataTableElement: function(){
     return unsafeWindow.jQuery('table[rules=all]');
   },
 
-  mapHeadings: function(){
+  mapSeriesLabel: function(){
+    var mapping = {};
+    var $ = unsafeWindow.jQuery;
+    $('p>table>tbody>tr').each(function(){
+      var key = $(this).find('td:first').text();
+      if (key != ''){
+        var value = $(this).find('td:last').text();
+        mapping[key] = value;
+      }
+    });
+    return function(key){
+      return mapping[key] || '???';
+    }
   }
 }
 ONSGraphs.go();
