@@ -6,26 +6,33 @@
 // ==/UserScript==
 
 ONSGraphs = {
-  loadScripts: function(){
+  loadJQuery: function(){
     var GM_JQ = document.createElement('script');
-    GM_JQ.src = 'http://po-ru.com/ons-graph/monster.js';
+    GM_JQ.src = 'http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js';
     GM_JQ.type = 'text/javascript';
     document.getElementsByTagName('head')[0].appendChild(GM_JQ);
   },
 
-  waitForScriptsToLoad: function() {
+  waitForJQueryToLoad: function() {
     if(typeof unsafeWindow.jQuery == 'undefined'){
-      window.setTimeout(ONSGraphs.waitForScriptsToLoad,100);
+      window.setTimeout(ONSGraphs.waitForJQueryToLoad,100);
     } else {
-      ONSGraphs.drawGraph();
-      ONSGraphs.addLabelTranslations();
-      ONSGraphs.loadCustomCss();
+      var $ = unsafeWindow.jQuery;
+      $.getScript('http://flot.googlecode.com/svn/trunk/excanvas.js', function(){
+        $.getScript('http://flot.googlecode.com/svn/trunk/jquery.flot.js', function(){
+          $.getScript('http://plugins.jquery.com/files/jquery.graphTable-0.2.js.txt', function(){
+            ONSGraphs.drawGraph();
+            ONSGraphs.addLabelTranslations();
+            ONSGraphs.loadCustomCss();
+          })
+        })
+      })
     }
   },
 
   go: function(){
-    ONSGraphs.loadScripts();
-    ONSGraphs.waitForScriptsToLoad();
+    ONSGraphs.loadJQuery();
+    ONSGraphs.waitForJQueryToLoad();
   },
 
   drawGraph: function(){
