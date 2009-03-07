@@ -18,6 +18,7 @@ ONSGraphs = {
     } else {
       ONSGraphs.drawGraph();
       ONSGraphs.addLabelTranslations();
+      ONSGraphs.loadCustomCss();
     }
   },
 
@@ -34,6 +35,7 @@ ONSGraphs = {
 
   addLabelTranslations: function(){
     var table = document.createElement('table');
+    table.setAttribute('class', 'seriesLabels');
     unsafeWindow.jQuery.each(ONSGraphs.seriesLabelTranslations(), function(key, value){
       var tr = document.createElement('tr');
       var th = document.createElement('th');
@@ -45,6 +47,10 @@ ONSGraphs = {
       table.appendChild(tr);
     });
     ONSGraphs.dataTableElement().before(table);
+  },
+
+  loadCustomCss: function(){
+    GM_addStyle('.seriesLabels tr, .seriesLabels td { font-size: 10px; } .seriesLabels { margin: 1em 0; }');
   },
 
   dataTableElement: function(){
