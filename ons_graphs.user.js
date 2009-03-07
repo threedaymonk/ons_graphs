@@ -14,7 +14,7 @@ ONSGraphs = {
   },
 
   waitForScriptsToLoad: function() {
-    if(typeof unsafeWindow.jQuery == 'undefined') {
+    if(typeof unsafeWindow.jQuery == 'undefined'){
       window.setTimeout(ONSGraphs.waitForScriptsToLoad,100);
     } else {
       ONSGraphs.drawGraph();
@@ -29,9 +29,9 @@ ONSGraphs = {
   },
 
   drawGraph: function(){
-    ONSGraphs.dataTableElement().graphTable({ series: 'columns',
+    ONSGraphs.dataTableElement().graphTable({ series:   'columns',
                                               position: 'before',
-                                              height: '400' });
+                                              height:   '400' });
   },
 
   addLabelTranslations: function(){
