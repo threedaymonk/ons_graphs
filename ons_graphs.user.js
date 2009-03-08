@@ -1,3 +1,11 @@
+// ONS Graphs
+//
+// Generate graphs in the browser for "timeline
+// datasets":http://www.statistics.gov.uk/statbase/tsdtimezone.asp on the UK
+// "Office for National Statistics":http://www.statistics.gov.uk/ website.
+//
+// See http://github.com/threedaymonk/ons_graphs for more information.
+//
 // ==UserScript==
 // @name           ONS Graphs
 // @namespace      http://rewiredstate.org/
