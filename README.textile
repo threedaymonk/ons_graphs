@@ -10,7 +10,7 @@ h2. Using it
 
 # Get "Firefox":http://getfirefox.com/
 # Install "GreaseMonkey":https://addons.mozilla.org/firefox/addon/748
-# Install "ons_graphs.user.js":http://github.com/threedaymonk/ons_graphs/raw/3ff8362c76e3dc82e94857cd255d244af1174f78/ons_graphs.user.js
+# Install "ons_graphs.user.js":http://github.com/threedaymonk/ons_graphs/raw/master/ons_graphs.user.js
 
 Browse to a "timeline dataset":http://www.statistics.gov.uk/statbase/tsdtimezone.asp, *View Table*, *View Series*, *Add to Selection*, *Download* then *View On-Screen*. (Sorry, but we couldn't improve _that_ awful navigation experience so easily!) You should see a graph of the data at the top, like this:
 
